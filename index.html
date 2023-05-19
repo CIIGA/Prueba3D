@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-</head>
-<body>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
     <!-- Se define la escena de ar js -->
-    <a-scene arjs>
-        <!-- Marcador hiro que es el defecto -->
-        <!-- O custom marker para generar codigos qr pára usarlo mas personalizado -->
-        <a-marker preset="hiro">
-            <!-- Se crea la entidad con la posicion y la escala de x y z -->
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-                <!-- Se crea la entidad de los objetos -->
-              <!-- <a-sphere radius="5" color="blue"></a-sphere> -->
-              <a-entity scale="0.5" gltf-model="https://raw.githubusercontent.com/CIIGA/Prueba3D/main/casa.glb">
+    <!-- <a-scene arjs> -->
+    <!-- Marcador hiro que es el defecto -->
+    <!-- O custom marker para generar codigos qr pára usarlo mas personalizado -->
+    <!-- <a-marker preset="hiro"> -->
+    <!-- Se crea la entidad con la posicion y la escala de x y z -->
+    <!-- <a-entity position="0 0 0" scale="0.1 0.1 0.1"> -->
+    <!-- Se crea la entidad de los objetos -->
+    <!-- <a-sphere radius="5" color="blue"></a-sphere> -->
+    <!-- <a-entity scale="0.5" gltf-model="https://raw.githubusercontent.com/CIIGA/Prueba3D/main/casa.glb"> -->
 
-              </a-entity>
+    <!-- </a-entity>
             </a-sphere>
-        </a-marker>
-        <!-- Entidad de la camara  en donde se agrega una posicion al marcador para que se viusalice en medio cuando se posicione -->
-        <a-entity camera position="0 0 0" look-controls></a-entity>
+        </a-marker> -->
+    <!-- Entidad de la camara  en donde se agrega una posicion al marcador para que se viusalice en medio cuando se posicione -->
+    <!-- <a-entity camera position="0 0 0" look-controls></a-entity>
+    </a-scene> -->
+
+    <!-- Codigo con qr -->
+    <a-scene
+      vr-mode-ui="enabled: false;"
+      renderer="logarithmicDepthBuffer: true;"
+      embedded
+      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+    >
+      <a-nft
+        type="nft"
+        url="https://raw.githubusercontent.com/CIIGA/Prueba3D/main/output/ciiga"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+      >
+        <a-entity
+          scale="0.5"
+          gltf-model="https://raw.githubusercontent.com/CIIGA/Prueba3D/main/casa.glb"
+        ></a-entity>
+      </a-nft>
+      <a-entity camera></a-entity>
     </a-scene>
-</body>
+  </body>
 </html>
