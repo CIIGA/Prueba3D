@@ -9,26 +9,26 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
   <body>
-    <!-- Se define la escena de ar js -->
-    <!-- <a-scene arjs> -->
+    <!-- Se define la escena de ar js --> 
+    <a-scene arjs>
     <!-- Marcador hiro que es el defecto -->
     <!-- O custom marker para generar codigos qr pára usarlo mas personalizado -->
-    <!-- <a-marker preset="hiro"> -->
+    <a-marker preset="hiro">
     <!-- Se crea la entidad con la posicion y la escala de x y z -->
-    <!-- <a-entity position="0 0 0" scale="0.1 0.1 0.1"> -->
+    <a-entity position="0 0 0" scale="0.1 0.1 0.1">
     <!-- Se crea la entidad de los objetos -->
-    <!-- <a-sphere radius="5" color="blue"></a-sphere> -->
-    <!-- <a-entity scale="0.5" gltf-model="https://raw.githubusercontent.com/CIIGA/Prueba3D/main/casa.glb"> -->
+    <a-sphere radius="5" color="blue"></a-sphere> 
+    <a-entity scale="0.5" gltf-model="https://raw.githubusercontent.com/CIIGA/Prueba3D/main/casa.glb">
 
-    <!-- </a-entity>
+     </a-entity>
             </a-sphere>
-        </a-marker> -->
+        </a-marker>
     <!-- Entidad de la camara  en donde se agrega una posicion al marcador para que se viusalice en medio cuando se posicione -->
-    <!-- <a-entity camera position="0 0 0" look-controls></a-entity>
-    </a-scene> -->
+    <a-entity camera position="0 0 0" look-controls></a-entity>
+    </a-scene>
 
     <!-- Codigo con qr -->
-    <a-scene
+    <!-- <a-scene
       vr-mode-ui="enabled: false;"
       renderer="logarithmicDepthBuffer: true;"
       embedded
@@ -47,7 +47,7 @@
           gltf-model="https://raw.githubusercontent.com/CIIGA/Prueba3D/main/casa.glb"
         ></a-entity>
       </a-nft>
-      <a-entity camera></a-entity>
-    </a-scene>
+      <a-entity camera position="0 0 0" look-controls></a-entity>
+    </a-scene> -->
   </body>
 </html>
